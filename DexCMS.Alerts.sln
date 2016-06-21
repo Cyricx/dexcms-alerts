@@ -5,6 +5,17 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexCMS.Alerts", "DexCMS.Alerts\DexCMS.Alerts.csproj", "{F441B874-F736-41A2-BCDB-07A6C9BEF582}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{766022AF-AF69-4336-AF5E-45C1FBBDD4B3}"
+	ProjectSection(SolutionItems) = preProject
+		gruntfile.js = gruntfile.js
+		package.json = package.json
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexCMS.Alerts.Mvc", "DexCMS.Alerts.Mvc\DexCMS.Alerts.Mvc.csproj", "{2C21997C-F682-455D-B753-1EFEDED42FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexCMS.Alerts.WebApi", "DexCMS.Alerts.WebApi\DexCMS.Alerts.WebApi.csproj", "{208AC236-EE8A-4600-9586-0877677BA32A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +26,14 @@ Global
 		{F441B874-F736-41A2-BCDB-07A6C9BEF582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F441B874-F736-41A2-BCDB-07A6C9BEF582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F441B874-F736-41A2-BCDB-07A6C9BEF582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C21997C-F682-455D-B753-1EFEDED42FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C21997C-F682-455D-B753-1EFEDED42FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C21997C-F682-455D-B753-1EFEDED42FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C21997C-F682-455D-B753-1EFEDED42FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208AC236-EE8A-4600-9586-0877677BA32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208AC236-EE8A-4600-9586-0877677BA32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208AC236-EE8A-4600-9586-0877677BA32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208AC236-EE8A-4600-9586-0877677BA32A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
