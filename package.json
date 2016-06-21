@@ -3,6 +3,7 @@
   "name": "dexcms-alerts",
   "private": true,
   "dependencies": {
+    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.1.0"
   },
   "devDependencies": {
     "grunt": "1.0.1",
