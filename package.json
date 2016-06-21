@@ -1,9 +1,13 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.0-alpha",
   "name": "dexcms-alerts",
-  "private": true,
+  "description": "Alerts library for Dex CMS",
+  "keywords": [ ".net", "cms", "framework" ],
+  "author": "Chris Byram",
+  "bugs": "https://github.com/Cyricx/dexcms-alerts/issues",
+  "license": "MIT",
   "dependencies": {
-    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.1.0"
+    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.1.0-alpha"
   },
   "devDependencies": {
     "grunt": "1.0.1",
