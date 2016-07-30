@@ -1,0 +1,34 @@
+﻿<div class="col-xs-12">
+    <h2>{{title}}</h2>
+    <form name="manageAlerts" novalidate angular-validator angular-validator-submit="save(currentItem)">
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <datetimepicker max-date="currentItem.endDate" mousewheel="false" name="startDate" show-spinners="true"
+                             required   ng-model="currentItem.startDate" date-format="MM/dd/yyyy"></datetimepicker>
+                <span class="control-label text-danger" 
+                       ng-show="!currentItem.startDate"><strong><i class="fa fa-times"></i> Start Date is required</strong></span>
+                <span class="control-label text-danger"
+                      ng-show="currentItem.endDate && currentItem.startDate > currentItem.endDate">
+                    <i class="fa fa-times"></i>  Start Date must be lower than End Date.
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <datetimepicker mousewheel="false" min-date="currentItem.startDate" ng-model="currentItem.endDate" show-spinners="true" date-format="MM/dd/yyyy"></datetimepicker>
+            </div>
+            <div class="form-group">
+                <label for="alertText">Alert:</label>
+                <textarea class="form-control" maxlength="250" required validate-on="dirty" name="alertText" id="alertText"
+                          ng-model="currentItem.alertText"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="displayOrder">Display Order:</label>
+                <input class="form-control" type="number" required validate-on="dirty" name="displayOrder" id="displayOrder"
+                       ng-model="currentItem.displayOrder" />
+            </div>
+            <button class="btn btn-primary" type="submit" ng-disabled="manageAlerts.$invalid || (currentItem.endDate && currentItem.startDate > currentItem.endDate)" >Save</button>
+            <a class="btn btn-primary" ui-sref="alerts">Cancel</a>
+        </div>
+    </form>
+</div>

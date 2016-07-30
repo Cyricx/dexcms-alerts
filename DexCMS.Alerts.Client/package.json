@@ -1,0 +1,10 @@
+{
+  "name": "dexcms-alerts-client",
+  "version": "0.0.0",
+  "description": "DexCMS.Alerts.Client",
+  "main": "app.js",
+  "author": {
+    "name": "Cyricx",
+    "email": "contact@chrisbyram.com"
+  }
+}
