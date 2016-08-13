@@ -41,6 +41,7 @@
     <Content Include="package.json" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Alerts\Alerts\alerts.editor.html" />
     <Content Include="Scripts\Applications\ControlPanel\Modules\Alerts\Alerts\alerts.list.html" />
+    <Content Include="Scripts\Applications\ControlPanel\Modules\Alerts\Alerts\_alerts.list.buttons.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configurations\" />
