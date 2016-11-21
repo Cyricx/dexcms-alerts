@@ -76,6 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DefaultViews\RootViews\Shared\Alerts\_AlertToast.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -85,6 +86,10 @@
       <Project>{f441b874-f736-41a2-bcdb-07a6c9bef582}</Project>
       <Name>DexCMS.Alerts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DefaultScripts\Alerts\AlertsToast.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
