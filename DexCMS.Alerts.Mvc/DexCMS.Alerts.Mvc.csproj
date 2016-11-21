@@ -76,7 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DefaultViews\RootViews\Shared\Alerts\_AlertToast.cshtml" />
+    <None Include="DefaultViews\RootViews\Shared\Alerts\_AlertsToast.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
