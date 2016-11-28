@@ -6,8 +6,12 @@
   "author": "Chris Byram",
   "bugs": "https://github.com/Cyricx/dexcms-alerts/issues",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Cyricx/dexcms-alerts.git"
+  },
   "dependencies": {
-    "dexcms-core": "https://github.com/Cyricx/dexcms-core.git#0.1.0-alpha"
+    "dexcms-core": "git+https://git@github.com/Cyricx/dexcms-core.git#development"
   },
   "devDependencies": {
     "grunt": "1.0.1",
