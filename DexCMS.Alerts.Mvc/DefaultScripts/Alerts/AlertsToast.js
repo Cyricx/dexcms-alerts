@@ -1,5 +1,5 @@
 ﻿$.ajax({
-    url: '@Url.Content("/alerts/getalerts")',
+    url: DEXCMS_GLOBALS.ROOT_PATH + "/alerts/getalerts",
     type: 'GET'
 }).done(function (data) {
     if (data != null && data.length > 0) {
@@ -10,10 +10,3 @@
         }
     }
 });
-
-var fixHeader = function () {
-    var width = window.innerWidth - 20;
-    $('header').css('width', width);
-};
-
-$(window).on('resize', fixHeader).on('load', fixHeader);
