@@ -1,0 +1,24 @@
+﻿@import "_alerts-variables.scss";
+
+#alerts {
+    border: 2px solid $alerts-border-color;
+    width: 250px;
+    margin-left: 1em;
+    background-color: $alerts-background-color;
+    font-size: .8em;
+    border-radius: .5em;
+    .alert-title {
+        margin: .5em 1em;
+        font-size: 1.2em;
+        font-family: $alerts-title-font-family;
+        display: block;
+        font-weight: bold;
+    }
+    p {
+        margin: .5em;
+        i {
+            color: $alerts-icon-color;
+            margin-right: .2em;
+        }
+    }
+}
