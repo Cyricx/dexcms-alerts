@@ -78,7 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DefaultViews\RootViews\Shared\Alerts\_AlertsToast.cshtml" />
+    <None Include="Views\RootViews\Shared\Alerts\_AlertsToast.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="DefaultScripts\Alerts\AlertsToast.js" />
+    <Content Include="Scripts\Alerts\AlertsToast.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
