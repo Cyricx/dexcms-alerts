@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\IDexCMSAlertsContext.cs" />
+    <Compile Include="Initializers\AlertInitializer.cs" />
     <Compile Include="Initializers\AlertsInitializer.cs" />
     <Compile Include="Repositories\AlertRepository.cs" />
     <Compile Include="Globals\AlertsRegister.cs" />

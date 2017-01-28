@@ -1,26 +1,22 @@
 ﻿using DexCMS.Alerts.Contexts;
 using DexCMS.Core.Infrastructure.Globals;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace DexCMS.Alerts.Initializers
 {
-    public class AlertsInitializer: DexCMSInitializer<IDexCMSAlertsContext>
+    public class AlertsInitializer: DexCMSLibraryInitializer<IDexCMSAlertsContext>
     {
         public AlertsInitializer(IDexCMSAlertsContext context):base(context) { }
 
-        public override void Run()
+        public override List<Type> Initializers
         {
-            if (Context.Alerts.Count() == 0)
+            get
             {
-                Context.Alerts.Add(new Models.Alert
+                return new List<Type>
                 {
-                    AlertText = "This is a test alert!",
-                    DisplayOrder = 0,
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddDays(1)
-                });
-                Context.SaveChanges();
+                    typeof(AlertInitializer)
+                };
             }
         }
     }
