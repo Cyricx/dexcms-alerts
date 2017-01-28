@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using DexCMS.Alerts.Models;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 
 namespace DexCMS.Alerts.Contexts
 {

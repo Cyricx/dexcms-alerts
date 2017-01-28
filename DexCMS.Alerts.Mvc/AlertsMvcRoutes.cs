@@ -1,4 +1,4 @@
-﻿using DexCMS.Core.Infrastructure.Models;
+﻿using DexCMS.Core.Models;
 using System.Web.Routing;
 using System.Web.Mvc;
 

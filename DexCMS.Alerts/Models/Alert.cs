@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using DexCMS.Core.Infrastructure.Attributes;
+using DexCMS.Core.Attributes;
 
 namespace DexCMS.Alerts.Models
 {

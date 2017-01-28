@@ -1,8 +1,8 @@
 ﻿using DexCMS.Alerts.Models;
 using DexCMS.Alerts.Contexts;
-using DexCMS.Core.Infrastructure.Repositories;
+using DexCMS.Core.Repositories;
 using DexCMS.Alerts.Interfaces;
-using DexCMS.Core.Infrastructure.Contexts;
+using DexCMS.Core.Contexts;
 
 namespace DexCMS.Alerts.Repositories
 {

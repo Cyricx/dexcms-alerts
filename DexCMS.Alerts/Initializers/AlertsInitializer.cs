@@ -1,5 +1,5 @@
 ﻿using DexCMS.Alerts.Contexts;
-using DexCMS.Core.Infrastructure.Globals;
+using DexCMS.Core.Globals;
 using System;
 using System.Collections.Generic;
 

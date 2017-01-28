@@ -1,5 +1,5 @@
 ﻿using DexCMS.Alerts.Models;
-using DexCMS.Core.Infrastructure.Interfaces;
+using DexCMS.Core.Interfaces;
 
 namespace DexCMS.Alerts.Interfaces
 {
