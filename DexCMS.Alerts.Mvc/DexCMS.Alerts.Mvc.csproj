@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="AlertsMvcRoutes.cs" />
     <Compile Include="Controllers\AlertsController.cs" />
+    <Compile Include="Initializers\AlertsMvcInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
