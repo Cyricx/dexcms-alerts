@@ -1,8 +1,10 @@
-﻿using System;
+﻿using DexCMS.Alerts.Models;
+using DexCMS.Core.Globals;
+using System;
 
 namespace DexCMS.Alerts.WebApi.ApiModels
 {
-    public class AlertApiModel
+    public class AlertApiModel: DexCMSViewModel<AlertApiModel, Alert>
     {
         public int AlertID { get; set; }
 

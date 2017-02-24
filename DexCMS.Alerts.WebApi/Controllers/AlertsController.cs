@@ -20,23 +20,13 @@ namespace DexCMS.Alerts.WebApi.Controllers
             repository = repo;
         }
 
-        // GET api/Alerts
+        [ResponseType(typeof(AlertApiModel))]
         public List<AlertApiModel> GetAlerts()
         {
-            var items = repository.Items.Select(x => new AlertApiModel
-            {
-                AlertID = x.AlertID,
-                StartDate = x.StartDate,
-                EndDate = x.EndDate,
-                AlertText = x.AlertText,
-                DisplayOrder = x.DisplayOrder
-            }).ToList();
-
-            return items;
+            return AlertApiModel.MapForClient(repository.Items);
         }
 
-        // GET api/Alerts/5
-        [ResponseType(typeof(Alert))]
+        [ResponseType(typeof(AlertApiModel))]
         public async Task<IHttpActionResult> GetAlert(int id)
         {
             Alert alert = await repository.RetrieveAsync(id);
@@ -45,53 +35,44 @@ namespace DexCMS.Alerts.WebApi.Controllers
                 return NotFound();
             }
 
-            AlertApiModel model = new AlertApiModel()
-            {
-                AlertID = alert.AlertID,
-                StartDate = alert.StartDate,
-                EndDate = alert.EndDate,
-                AlertText = alert.AlertText,
-                DisplayOrder = alert.DisplayOrder
-
-            };
-
-            return Ok(model);
+            return Ok(AlertApiModel.MapForClient(alert));
         }
 
-        // PUT api/Alerts/5
-        public async Task<IHttpActionResult> PutAlert(int id, Alert alert)
+        public async Task<IHttpActionResult> PutAlert(int id, AlertApiModel apiModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != alert.AlertID)
+            if (id != apiModel.AlertID)
             {
                 return BadRequest();
             }
+            Alert alert = await repository.RetrieveAsync(id);
+            AlertApiModel.MapForServer(apiModel, alert);
 
             await repository.UpdateAsync(alert, alert.AlertID);
 
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST api/Alerts
-        [ResponseType(typeof(Alert))]
-        public async Task<IHttpActionResult> PostAlert(Alert alert)
+        [ResponseType(typeof(AlertApiModel))]
+        public async Task<IHttpActionResult> PostAlert(AlertApiModel apiModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            Alert alert = new Alert();
+            AlertApiModel.MapForServer(apiModel, alert);
 
             await repository.AddAsync(alert);
 
-            return CreatedAtRoute("DefaultApi", new { id = alert.AlertID }, alert);
+            return CreatedAtRoute("DefaultApi", new { id = alert.AlertID }, AlertApiModel.MapForClient(alert));
         }
 
-        // DELETE api/Alerts/5
-        [ResponseType(typeof(Alert))]
+        [ResponseType(typeof(AlertApiModel))]
         public async Task<IHttpActionResult> DeleteAlert(int id)
         {
             Alert alert = await repository.RetrieveAsync(id);
@@ -102,7 +83,7 @@ namespace DexCMS.Alerts.WebApi.Controllers
 
             await repository.DeleteAsync(alert);
 
-            return Ok(alert);
+            return Ok(AlertApiModel.MapForClient(alert));
         }
     }
 }
